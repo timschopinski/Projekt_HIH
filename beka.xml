@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="beka.xsd">
+    <header>
+        <title>
+            Moje Hobby - Podróżowanie
+        </title>
+        <navbar>
+            <title>Home</title>
+            <title>Ranking</title>
+            <title>O mnie</title>
+        </navbar>
+    </header>
+    <slides>
+        <slide country="islandia">
+            <photo source="islandia.jpg"></photo>
+        </slide>
+        <slide country="hiszpnia">
+            <photo source="images/hiszpania.jpg"></photo>
+        </slide>
+        <slide country="dubaj">
+            <photo source="images/dubaj.jpg"></photo>
+        </slide>
+        <slide country="wenecja">
+            <photo source="images/wenecja.jpg"></photo>
+        </slide>
+        <slide country="edynburg">
+            <photo source="images/edynburg.jpg"></photo>
+        </slide>
+        <slide counbtry="paryz">
+            <photo source="images/paryz.jpg"></photo>
+        </slide>
+        <slide country="londyn">
+            <photo source="images/londyn.jpg"></photo>
+        </slide>
+    </slides>
+    <information>
+        <table>
+            <description>
+                <text>Moje ulubione hobby to podróże.
+                    Uwielbiam podróżować bez grupy i bez przewodnika, mimo że często znajduję się w trudnej sytuacji w nieznanych miejscach. Zwykle podróżuję z moją dziewczyną lub z przyjaciółmi. Przede wszystkim lubię podróżować samolotem i spędzać trochę czasu w różnych miejscach. Po drugie, interesuje mnie poznawanie nowych zabytków, poznawanie różnych kultur i nie tylko. Po trzecie, uwielbiam spędzać czas w pięknych miejscach i podziwiać piękno atrakcji przyrodniczych takich jak góry, wodospady, leśne jeziora, morza, lasy, doliny, wzgórza itp. Podróżowanie daje mi dobrą okazję do poznania historii odwiedzanego kraju, zobaczenia miejsc kulturowych i historycznych, poznania ludzi różnych narodowości, poznania ich tradycji, zwyczajów i kultury. Innymi słowy. Mogę poszerzyć mój światopogląd i mój umysł. W przyszłości zamierzam odwiedzić wiele krajów świata, w różnych odległych i dzikich miejscach z przepiękną scenerią takich jak Kolumbia, Kambodża, Malezja, Brazylia, Nepal.
+                </text>
+            </description>
+            <links>
+                <link source="http://youtube.com">youtube</link>
+                <link source="http://facebook.com">facebook</link>
+                <link source="http://instagram.com">instagram</link>
+                <link source="http://twitter.com">twitter</link>
+            </links>
+            <contact>
+                <phone>543527284823</phone>
+                <mail>schopinski@com</mail>
+            </contact>
+        </table>
+        <text id="bottom">
+            Tim Schopinski 2021
+        </text>
+    </information>
+</xml>
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<main>
+    <section class="cities">
+        <div class="container">
+            <div class="row">
+                <div class="rectangle col-12">
+                    <div id="logo">Moje Hobby - Podróżowanie
+                        <i class="icon-flight"></i>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="topnav">
+                        <a class="active" onclick="scroll_home()">Home</a>
+                        <a href="ranking.html">Ranking</a>
+                        <a onclick="scroll_aboutme()">O mnie</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="slides">
+                        <a href="islandia.html"> <img src="images/islandia.jpeg" alt=""></a>
+                    </div>
+
+                    <div class="slides">
+                        <a href="hiszpania.html"><img src="images/hiszpania.jpeg" alt="" ></a>
+                    </div>
+
+                    <div class="slides">
+                        <a href="dubaj.html"><img src="images/dubai.jpeg" alt=""></a>
+                    </div>
+
+                    <div class="slides">
+                        <a href="wenecja.html"><img src="images/wenecja.jpeg" alt=""></a>
+                    </div>
+
+                    <div class="slides">
+                        <a href="edynburg.html"><img src="images/edynburg.jpeg" alt=""></a>
+                    </div>
+
+                    <div class="slides">
+                        <a href="francja_paryz.html"><img src="images/paryz.jpeg" alt=""></a>
+                    </div>
+
+                    <div class="slides">
+                        <a href="londyn.html"><img src="images/londyn.jpeg" alt=""></a>
+                      </div>
+
+                      <div class="caption-container d-flex justify-content-center">
+                          <p id="caption"></p>
+                          <i onclick="vote()" class="voting-button icon-heart-empty"></i>
+                      </div>
+                  </div>
+                </div>
+                <div class="row thumbnails-container">
+                    <div class="column">
+                        <img class="demo cursor" src="images/islandia.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Islandia - Reyjkjavik">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/hiszpania.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Hiszpania - Peniscola">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/dubai.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Zjednoczone Emiraty Arabskie - Dubaj">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/wenecja.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Włochy - Wenecja">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/edynburg.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Szkocja - Edynburg">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/paryz.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Francja - Paryż">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/londyn.jpeg" style="width:100%" onclick="currentSlide(7)" alt="Wielka Brytania - Londyn">
+                    </div>
+                </div>
+            <div id="stop">
+
+            </div>
+                <div class="row">
+                    <div id="accordion">
+                        <h3>Hobby</h3>
+                        <div>
+                            Moje ulubione hobby to podróże.<br /><br />
+                            Uwielbiam podróżować bez grupy i bez przewodnika, mimo że często znajduję się w trudnej sytuacji w nieznanych miejscach. Zwykle podróżuję z moją dziewczyną lub z przyjaciółmi. Przede wszystkim lubię podróżować samolotem i spędzać trochę czasu w różnych miejscach. Po drugie, interesuje mnie poznawanie nowych zabytków, poznawanie różnych kultur i nie tylko. Po trzecie, uwielbiam spędzać czas w pięknych miejscach i podziwiać piękno atrakcji przyrodniczych takich jak góry, wodospady, leśne jeziora, morza, lasy, doliny, wzgórza itp.
+                            Podróżowanie daje mi dobrą okazję do poznania historii odwiedzanego kraju, zobaczenia miejsc kulturowych i historycznych, poznania ludzi różnych narodowości, poznania ich tradycji, zwyczajów i kultury. Innymi słowy. Mogę poszerzyć mój światopogląd i mój umysł. W przyszłości zamierzam odwiedzić wiele krajów świata, w różnych odległych i dzikich miejscach z przepiękną scenerią takich jak Kolumbia, Kambodża, Malezja, Brazylia, Nepal.
+                            <p></p>
+                        </div>
+                        <h3>Social media</h3>
+                        <div>
+                            <p>Moje social media.</p>
+                            <ul>
+                                <li>
+                                    <div class="yt">
+                                        <a href="http://youtube.com" target="_blank" class="sociallink"><i class="icon-youtube"></i></a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="fb">
+                                        <a href="http://facebook.com" target="_blank" class="sociallink"><i class="icon-facebook"></i></a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="ig">
+                                        <a href="http://instagram.com" target="_blank" class="sociallink"><i class="icon-instagram"></i></a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="tw">
+                                        <a href="http://twitter.com" target="_blank" class="sociallink"><i class="icon-twitter"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>Kontakt</h3>
+                        <div>
+                            <ul>
+                                <li>
+                                    <i class="demo-icon icon-phone"> +48 535 472 953</i>
+                                </li>
+
+                                <li>
+                                    <i class="demo-icon icon-mail-alt"> timschopinski@gmail.com</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <i> Tim Schopinski 2021</i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="scripts/voting.js"></script>
+    <script src="scripts/slides.js"></script>
+    <script src="scripts/sticky_menu.js"></script>
+    <script>
+    window.addEventListener('load', () => {
+        startSlide(1);
+    });
+    $( "#accordion" ).accordion();
+    function scroll_home() {
+        const elmnt = document.getElementById("logo");
+        elmnt.scrollIntoView();
+    }
+    function scroll_aboutme() {
+        const elmnt = document.getElementById("stop");
+        elmnt.scrollIntoView();
+    }
+</script>
+</body>
+
+</html>

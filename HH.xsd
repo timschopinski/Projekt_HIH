@@ -1,0 +1,63 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="hipertext" >
+		<xs:complexType >
+			<xs:sequence>
+				<xs:element name="definition">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="history" type="historyType" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="course" type="courseType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="historyType">
+		<xs:sequence>
+			<xs:element name="person" type="personType" />
+			<xs:element name="person" type="personType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="courseType">
+			<xs:sequence>
+				<xs:element name="student" type="personType"/>
+				<xs:element name="classes" type="classesType" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="information" type="informationType"/>
+			</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="classesType">
+		<xs:sequence>
+			<xs:element name="component" type="componentType" minOccurs="0" maxOccurs="7" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="componentType">
+		<xs:sequence>
+			<xs:element name="topic" type="xs:string" />
+			<xs:element name="theme" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="score" type="xs:decimal"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:byte"/>
+	</xs:complexType>
+	<xs:complexType name="informationType">
+		<xs:sequence>
+			<xs:element name="links" type="componentType" minOccurs="0" maxOccurs="7" />
+			<xs:element name="link" type="adressType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="adressType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="source" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="personType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="surname" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
