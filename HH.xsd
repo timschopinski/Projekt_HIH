@@ -61,3 +61,125 @@
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
+///
+		<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/>
+<xs:element name="hipertext">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="definition"/>
+			<xs:element ref="history"/>
+			<xs:element ref="course"/>
+		</xs:sequence>
+		<xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="definition" type="xs:string"/>
+<xs:element name="history">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" ref="person"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="person">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="name"/>
+			<xs:element ref="surname"/>
+			<xs:element ref="birth"/>
+			<xs:element minOccurs="0" ref="death"/>
+			<xs:element ref="image"/>
+			<xs:element minOccurs="0" ref="about"/>
+			<xs:element ref="achievements"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="birth" type="xs:integer"/>
+<xs:element name="death" type="xs:integer"/>
+<xs:element name="image">
+	<xs:complexType mixed="true">
+		<xs:attribute name="source" use="required"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="about" type="xs:string"/>
+<xs:element name="achievements">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" ref="achievement"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="achievement">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="title"/>
+			<xs:element minOccurs="0" ref="description"/>
+		</xs:sequence>
+		<xs:attribute name="n" use="required" type="xs:integer"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="title" type="xs:string"/>
+<xs:element name="description" type="xs:string"/>
+<xs:element name="course">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="student"/>
+			<xs:element maxOccurs="unbounded" ref="classes"/>
+			<xs:element ref="information"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="student">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="name"/>
+			<xs:element ref="surname"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="classes">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" ref="component"/>
+		</xs:sequence>
+		<xs:attribute name="kind" use="required" type="xs:NCName"/>
+		<xs:attribute name="obligatory" type="xs:NCName"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="component">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="topic"/>
+			<xs:element minOccurs="0" maxOccurs="unbounded" ref="theme"/>
+			<xs:element ref="score"/>
+		</xs:sequence>
+		<xs:attribute name="id" use="required" type="xs:integer"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="topic" type="xs:string"/>
+<xs:element name="theme" type="xs:string"/>
+<xs:element name="score" type="xs:integer"/>
+<xs:element name="information">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="links"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="links">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" ref="link"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="link">
+	<xs:complexType mixed="true">
+		<xs:attribute name="source" use="required" type="xs:anyURI"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="surname" type="xs:string"/>
+</xs:schema>

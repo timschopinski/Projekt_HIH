@@ -1,0 +1,71 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT xml (header,slides,information)>
+<!ATTLIST xml
+  xmlns CDATA #FIXED ''
+  xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation NMTOKEN #REQUIRED>
+
+<!ELEMENT header (title,navbar)>
+<!ATTLIST header
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT slides (slide)+>
+<!ATTLIST slides
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT information (table,text)>
+<!ATTLIST information
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT navbar (title)+>
+<!ATTLIST navbar
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT slide (photo)>
+<!ATTLIST slide
+  xmlns CDATA #FIXED ''
+  country NMTOKEN #REQUIRED>
+
+<!ELEMENT table (description,links,contact)>
+<!ATTLIST table
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT photo EMPTY>
+<!ATTLIST photo
+  xmlns CDATA #FIXED ''
+  source CDATA #REQUIRED>
+
+<!ELEMENT description (text)>
+<!ATTLIST description
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT links (link)+>
+<!ATTLIST links
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT contact (phone,mail)>
+<!ATTLIST contact
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link
+  xmlns CDATA #FIXED ''
+  source CDATA #REQUIRED>
+
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT mail (#PCDATA)>
+<!ATTLIST mail
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT text (#PCDATA)>
+<!ATTLIST text
+  xmlns CDATA #FIXED ''
+  id NMTOKEN #IMPLIED>
