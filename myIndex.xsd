@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:complexType name="journeysType">
+        <xs:sequence>
+            <xs:element name="logo" type="logoType" maxOccurs="1"/>
+            <xs:element name="slides" type="slidesType"/>
+            <xs:element name="table" type="tableType"/>
+            <xs:element name="info" type="infoType"/>
+            <xs:element name="form" type="formType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:attribute name="kind" type="shortType"/>
+
+    <xs:simpleType name="shortType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="logoType">
+        <xs:sequence>
+            <xs:element name="text" type="shortType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="slidesType">
+        <xs:sequence>
+            <xs:element name="slide" type="slideType" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="slideType">
+        <xs:sequence>
+            <xs:element name="image" type="imageType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imageType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="source" type="xs:anyURI" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="countryType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="title"/>
+            <xs:element type="xs:byte" name="place"/>
+            <xs:element type="xs:byte" name="points"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tableType">
+            <xs:sequence>
+                <xs:element type="countryType" name="country" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+
+    <xs:complexType name="infoType">
+        <xs:sequence>
+            <xs:element type="hobbyType" name="hobby"/>
+            <xs:element type="mediaType" name="media"/>
+            <xs:element type="kontaktType" name="kontakt"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="mediaType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="text"/>
+            <xs:element name="links" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="link" type="linkType" minOccurs="0" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+            <xs:attribute type="xs:string" name="kind"/>
+    </xs:complexType>
+
+    <xs:complexType name="linkType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="href" type="xs:anyURI" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="descriptionType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="text"/>
+        </xs:sequence>
+        <xs:attribute ref="kind"/>
+    </xs:complexType>
+
+    <xs:complexType name="hobbyType">
+        <xs:sequence>
+            <xs:element name="descr" type="longType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="longType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="kontaktType">
+        <xs:sequence>
+            <xs:element name="phone" type="phoneType"/>
+            <xs:element type="xs:string" name="email"/>
+        </xs:sequence>
+    </xs:complexType>
+
+        <xs:simpleType name="phoneType">
+            <xs:restriction base="xs:integer">
+                <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+            </xs:restriction>
+        </xs:simpleType>
+
+    <xs:complexType name="personType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element  name="surname" type="xs:string"/>
+            <xs:element name="gender" type="genderType"/>
+            <xs:element name="age" type="ageType"/>
+        </xs:sequence>
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="formType">
+        <xs:sequence>
+            <xs:element type="personType" name="person" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="ageType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="150"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="genderType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="mężczyzna"/>
+            <xs:enumeration value="kobieta"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>

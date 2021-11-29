@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<journeys>
+    <logo>
+        <text>Moje Hobby - Podróżowanie</text>
+    </logo>
+    <slides>
+        <slide>
+            <image source="images/islandia.jpg"></image>
+        </slide>
+
+        <slide>
+            <image source="images/hiszpania.jpeg"></image>
+        </slide>
+        <slide>
+            <image source="images/dubai.jpeg"></image>
+        </slide>
+
+        <slide>
+            <image source="images/wenecja.jpeg"></image>
+        </slide>
+
+        <slide>
+            <image source="images/edynburg.jpeg"></image>
+        </slide>
+
+        <slide>
+            <image source="images/paryz.jpeg"></image>
+        </slide>
+
+        <slide>
+            <image source="images/londyn.jpeg"></image>
+        </slide>
+    </slides>
+    <table>
+        <country>
+            <title>Islandia - Reyjkjavik</title>
+            <place>1</place>
+            <points>93</points>
+        </country>
+        <country >
+            <title>Wielka Brytania - Londyn</title>
+            <place>2</place>
+            <points>44</points>
+        </country>
+        <country>
+            <title>Szkocja - Edynburg</title>
+            <place>3</place>
+            <points>30</points>
+        </country>
+        <country>
+            <title>Zjednoczone Emiraty Arabskie</title>
+            <place>4</place>
+            <points>21</points>
+        </country>
+        <country>
+            <title>Francja - Paryż</title>
+            <place>5</place>
+            <points>16</points>
+        </country>
+        <country >
+            <title>Hiszpania - Peniscola</title>
+            <place>6</place>
+            <points>7</points>
+        </country>
+        <country >
+            <title>Włochy - Wenecja</title>
+            <place>7</place>
+            <points>5</points>
+        </country>
+
+    </table>
+    <info>
+        <hobby>
+            <descr>
+                Moje ulubione hobby to podróże.
+                Uwielbiam podróżować bez grupy i bez przewodnika, mimo że często znajduję się w trudnej sytuacji w nieznanych miejscach. Zwykle podróżuję z moją dziewczyną lub z przyjaciółmi. Przede wszystkim lubię podróżować samolotem i spędzać trochę czasu w różnych miejscach. Po drugie, interesuje mnie poznawanie nowych zabytków, poznawanie różnych kultur i nie tylko. Po trzecie, uwielbiam spędzać czas w pięknych miejscach i podziwiać piękno atrakcji przyrodniczych takich jak góry, wodospady, leśne jeziora, morza, lasy, doliny, wzgórza itp.
+                Podróżowanie daje mi dobrą okazję do poznania historii odwiedzanego kraju, zobaczenia miejsc kulturowych i historycznych, poznania ludzi różnych narodowości, poznania ich tradycji, zwyczajów i kultury. Innymi słowy. Mogę poszerzyć mój światopogląd i mój umysł. W przyszłości zamierzam odwiedzić wiele krajów świata, w różnych odległych i dzikich miejscach z przepiękną scenerią takich jak Kolumbia, Kambodża, Malezja, Brazylia, Nepal.
+            </descr>
+        </hobby>
+        <media>
+            <description kind="title">
+                <text>Moje social media.</text>
+            </description>
+            <links>
+                <link href="http://youtube.com">youtube</link>
+                <link href="http://facebook.com">facebook</link>
+                <link href="http://instagram.com">Instagram</link>
+                <link href="http://twitter.com">twitter</link>
+            </links>
+        </media>
+        <kontakt>
+            <phone>123 456 789</phone>
+            <email>tttt@gmail.com</email>
+        </kontakt>
+    </info>
+    <form>
+        <person id="1">
+            <name></name>
+            <surname></surname>
+            <gender></gender>
+            <age></age>
+        </person>
+        <person id="2">
+            <name></name>
+            <surname></surname>
+            <gender></gender>
+            <age></age>
+        </person>
+    </form>
+</journeys>

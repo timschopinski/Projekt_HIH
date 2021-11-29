@@ -1,71 +1,37 @@
-<?xml encoding="UTF-8"?>
-
-<!ELEMENT xml (header,slides,information)>
-<!ATTLIST xml
-  xmlns CDATA #FIXED ''
-  xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
-  xsi:noNamespaceSchemaLocation NMTOKEN #REQUIRED>
-
-<!ELEMENT header (title,navbar)>
-<!ATTLIST header
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT slides (slide)+>
-<!ATTLIST slides
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT information (table,text)>
-<!ATTLIST information
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT navbar (title)+>
-<!ATTLIST navbar
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT slide (photo)>
-<!ATTLIST slide
-  xmlns CDATA #FIXED ''
-  country NMTOKEN #REQUIRED>
-
-<!ELEMENT table (description,links,contact)>
-<!ATTLIST table
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT photo EMPTY>
-<!ATTLIST photo
-  xmlns CDATA #FIXED ''
-  source CDATA #REQUIRED>
-
-<!ELEMENT description (text)>
-<!ATTLIST description
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT links (link)+>
-<!ATTLIST links
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT contact (phone,mail)>
-<!ATTLIST contact
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT link (#PCDATA)>
-<!ATTLIST link
-  xmlns CDATA #FIXED ''
-  source CDATA #REQUIRED>
-
-<!ELEMENT phone (#PCDATA)>
-<!ATTLIST phone
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT mail (#PCDATA)>
-<!ATTLIST mail
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT title (#PCDATA)>
-<!ATTLIST title
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT text (#PCDATA)>
-<!ATTLIST text
-  xmlns CDATA #FIXED ''
-  id NMTOKEN #IMPLIED>
+<!DOCTYPE journeys [
+        <!ELEMENT journeys (logo|slides|table|info|form)*>
+        <!ELEMENT logo (text)*>
+        <!ELEMENT text (#PCDATA)>
+        <!ELEMENT slides (slide)*>
+        <!ELEMENT slide (image)*>
+        <!ELEMENT image (#PCDATA)>
+        <!ATTLIST image
+                source CDATA #REQUIRED>
+        <!ELEMENT table (country)*>
+        <!ELEMENT country (title|place|points)*>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT place (#PCDATA)>
+        <!ELEMENT points (#PCDATA)>
+        <!ELEMENT info (hobby|media|kontakt)*>
+        <!ELEMENT hobby (descr)*>
+        <!ELEMENT descr (#PCDATA)>
+        <!ELEMENT media (description|links)*>
+        <!ELEMENT description (text)*>
+        <!ATTLIST description
+                kind CDATA #REQUIRED>
+        <!ELEMENT links (link)*>
+        <!ELEMENT link (#PCDATA)>
+        <!ATTLIST link
+                href CDATA #REQUIRED>
+        <!ELEMENT kontakt (phone|email)*>
+        <!ELEMENT phone (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT form (person)*>
+        <!ELEMENT person (name|surname|gender|age)*>
+        <!ATTLIST person
+                id CDATA #REQUIRED>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT surname (#PCDATA)>
+        <!ELEMENT gender (#PCDATA)>
+        <!ELEMENT age (#PCDATA)>
+        ]>
